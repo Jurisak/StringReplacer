@@ -1,0 +1,9 @@
+#Makefile
+
+CC=gcc
+CFLAGS= -W -Wall -pedantic -g
+
+
+string_replacer: string_replacer.c
+	$(CC) $(CFLAGS) string_replacer.c -o string_replacer
+
