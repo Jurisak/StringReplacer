@@ -40,10 +40,15 @@ def replace_sequence(input_data):
     if my_sequence != "":
         output += get_adjusted_output(my_sequence, 1)
     print(output)
-
-input_data = str(raw_input())
+try:
+    input_data = str(raw_input())
+except NameError:
+    input_data = str(input())
 while not is_end_of_listening(input_data):
     if not input_data.isalpha():
         sys.exit("ERROR: Wrong input. Contains non alphabetic characters")
     replace_sequence(input_data)
-    input_data = str(raw_input())
+    try:
+        input_data = str(raw_input())
+    except NameError:
+        input_data = str(input())
